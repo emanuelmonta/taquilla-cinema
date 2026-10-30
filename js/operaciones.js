@@ -22,6 +22,7 @@ export function venderBoleto(pelicula, cantidad_boletos){
         }
     } else {
         alert('La película no existe.');
+        console.log('La película no existe.');
         return 0;
     }
 }
