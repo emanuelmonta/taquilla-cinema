@@ -2,7 +2,7 @@ import { venderBoleto, ingresoTotales } from "./operaciones.js";
 import { peliculas } from "./datos.js";
 
 function taquilla(){
-    alert("Sistema de taquilla iniciado en el navegador.")
+    alert("Sistema de taquilla iniciado en el navegador.");
     console.log("Sistema de taquilla iniciado en el navegador.")
     
     let continuar = true;
@@ -15,6 +15,23 @@ function taquilla(){
             "2. Ver arqueo de caja (Ingresos totales)\n" +
             "3. Salir"
         );
+    }
+    switch (opcion) {
+        case "1":
+            venderBoleto(); 
+            break;
+        case "2":
+            ingresosTotales(); 
+            break;
+        case "3":
+            continuar = false; 
+            alert("Gracias por usar el sistema de taquilla. ¡Hasta luego!");
+            console.log("Gracias por usar el sistema de taquilla. ¡Hasta luego!");
+            break;
+        default:
+            alert("Opción inválida. Por favor, elige una opción válida.");
+            console.log("Opción inválida. Por favor, elige una opción válida.");
+            break;
     }
 }
 
