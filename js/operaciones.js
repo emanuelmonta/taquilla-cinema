@@ -9,12 +9,15 @@ export function venderBoleto(pelicula, cantidad_boletos){
         if (encontrada.capacidad_total >= cantidad_boletos) {
             encontrada.capacidad_total -= cantidad_boletos;
             alert(`Compra exitosa. Boletos restantes: ${encontrada.capacidad_total}`);
+            console.log(`Compra exitosa. Boletos restantes: ${encontrada.capacidad_total}`)
             let compra = encontrada.precio_boleta * cantidad_boletos;
-            alert(`Total de la compra: $${compra}`);  
+            alert(`Total de la compra: $${compra}`)
+            console.log(`Total de la compra: $${compra}`)  
             encontrada.boletas_vendidas += cantidad_boletos;    
             return compra;
         } else {
             alert('No hay suficientes boletos disponibles.');
+            console.log('No hay suficientes boletos disponibles.');
             return 0;
         }
     } else {
@@ -30,5 +33,6 @@ export function ingresosTotales(){
         total += ingresos;
     });
     alert(`Ingreso total: $${total}`);
+    console.log(`Ingreso total: $${total}`);
     return total;
 }
